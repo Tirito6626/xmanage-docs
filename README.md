@@ -11,6 +11,17 @@ Multi-functional systemd wrapper written in pure bash.
 - All features of systemd configuration
 - Backups
 
+## Requirements
+- GNU/Linux
+- jq
+- awk
+- grep
+- systemd 
+- coreutils
+- mkdir 
+- bash
+
+
 ## Installation
 
 Firstly, clone GIT repository with the binary
