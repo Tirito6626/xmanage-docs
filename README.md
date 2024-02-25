@@ -16,6 +16,7 @@ Multi-functional systemd wrapper written in pure bash.
 - jq
 - awk
 - grep
+- tput
 - systemd 
 - coreutils
 - mkdir 
