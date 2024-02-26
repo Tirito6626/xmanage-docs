@@ -1,3 +1,6 @@
+![logo](https://cdn.discordapp.com/attachments/1129769809039609962/1211675962903625788/Untitled26_20240226150732.png?ex=65ef102d&is=65dc9b2d&hm=fb4a01665c0631c213e49d759839d1c3d29521501f7d0418fef0b32111af70eb&)
+
+
 # XManage
 Multi-functional systemd wrapper written in pure bash.
 
