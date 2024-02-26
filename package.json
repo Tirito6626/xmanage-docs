@@ -1,13 +1,13 @@
 {
-  "name": "geo-vm-docs",
+  "name": "xmanage-docs",
   "version": "1.0.0",
-  "description": "Geo-VM Documentation.",
+  "description": "XManage Documentation.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start"
   },
-  "author": "Geo-VM",
+  "author": "Tirito",
   "license": "MIT",
   "dependencies": {
     "next": "^13.0.6",
