@@ -17,3 +17,9 @@ Multi-functional systemd wrapper written in pure bash.
 ## Installation
 
 Please visit https://xmanage.tirito.de
+
+## Donations
+
+While this project is free, we do not get a single profit from this.
+
+Want to donate? Each dollar helps us to keep XManage alive! - [PayPal](https://www.paypal.com/paypalme/tiritoeasy)
