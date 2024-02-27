@@ -1,0 +1,48 @@
+import { Callout } from 'nextra/components'
+
+
+## Requirements
+- GNU/Linux
+- jq
+- awk
+- grep
+- tput
+- systemd 
+- coreutils
+- mkdir 
+- bash
+
+## Installation
+
+Firstly, download the latest release from the [XManage Binaries Repository](https://github.com/Tirito6626/xmanage-binaries/releases) 
+<Callout type="warning" emoji="i">
+  Don't forget to replace the "{RELEASE_VERSION}" with the real release version.
+</Callout>
+```bash
+wget https://github.com/Tirito6626/xmanage-binaries/releases/download/{RELEASE_VERSION}/xmanage
+```
+Now, make the downloaded binary executable
+
+```bash
+chmod +x ./xmanage
+```
+
+Run the binary
+
+```bash
+./xmanage/xmanage
+```
+
+Done! The command will return all available commands
+If you want to run xmanage with only one command, copy the binary into /usr/bin/ folder
+
+```bash
+cp ./xmanage /usr/bin/
+```
+
+Check if it's working
+
+```bash
+xmanage
+```
+

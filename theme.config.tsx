@@ -8,7 +8,7 @@ const config: DocsThemeConfig = {
     key: '1x.0',
     text: (
       <a href="#">
-        🎉 XManage v0.0.1 version.
+         XManage v0.0.1 version.
       </a>
     )
   },
@@ -24,18 +24,18 @@ const config: DocsThemeConfig = {
   head: (
     <>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta property="og:title" content="XManage Docs" />
+    <meta property="og:title" content="XManage Documentation" />
     </>
   ),
 
   /* Logo */
   logo: (
-    <> <img src="/assets/images/xmanage.png" alt="XManage" style={{ width: '50px', height: 'auto' }} /> </>
+    <> <img src="assets/images/xmanage.png" alt="XManage" style={{ width: '50px', height: 'auto' }} /> </>
   ),
 
   /* GitHub button */
   project: {
-    link: 'https://github.com/Tirito6626/xmanage',
+    link: 'https://github.com/Tirito6626/xmanage-binaries',
   },
 
   /* Discord button */
@@ -44,9 +44,9 @@ const config: DocsThemeConfig = {
   },
 
   /* GitHub stuff */
-  docsRepositoryBase: 'https://github.com/Tirito6626/xmanage',
+  docsRepositoryBase: 'https://github.com/Tirito6626/xmanage-binaries',
   footer: {
-    text: 'Made with ❤️',
+    text: 'Credits to: ItzGeoYT',
   },
 }
 
