@@ -30,7 +30,7 @@ const config: DocsThemeConfig = {
 
   /* Logo */
   logo: (
-    <> <img src="assets/images/xmanage.png" alt="XManage" style={{ width: '50px', height: 'auto' }} /> </>
+    <> <img src="/assets/images/xmanage.png" alt="XManage" style={{ width: '50px', height: 'auto' }} /> </>
   ),
 
   /* GitHub button */
