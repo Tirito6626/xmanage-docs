@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start"
   },
-  "author": "Tirito",
+  "author": "Tirito6626",
   "license": "MIT",
   "dependencies": {
     "next": "^13.0.6",

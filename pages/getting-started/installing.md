@@ -1,6 +1,3 @@
-import { Callout } from 'nextra/components'
-
-
 ## Requirements
 - GNU/Linux
 - jq
@@ -14,10 +11,7 @@ import { Callout } from 'nextra/components'
 
 ## Installation
 
-Firstly, download the latest release from the [XManage Binaries Repository](https://github.com/Tirito6626/xmanage-binaries/releases) 
-<Callout type="warning" emoji="i">
-  Don't forget to replace the "{RELEASE_VERSION}" with the real release version.
-</Callout>
+Firstly, download the latest release from the [XManage Binaries Repository](https://github.com/Tirito6626/xmanage-binaries/releases). Don't forget to replace the "{RELEASE_VERSION}" with the real release version.
 ```bash
 wget https://github.com/Tirito6626/xmanage-binaries/releases/download/{RELEASE_VERSION}/xmanage
 ```
