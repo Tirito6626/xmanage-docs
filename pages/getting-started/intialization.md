@@ -10,6 +10,4 @@ xmanage server create
 
 It will ask you for server's information, RAM, CPU and etc. XManage will create all required directories on the first run
 
-## So, you are ready!
-
 Check `xmanage help` to get all commands and how to manage your server
