@@ -4,19 +4,19 @@ import { DocsThemeConfig } from 'nextra-theme-docs'
 const config: DocsThemeConfig = {
 
   /* Announcement */
-  banner: {
+ /* banner: {
     key: '1x.0',
     text: (
       <a href="#">
          XManage v0.0.1 version.
       </a>
     )
-  },
+  }, */
 
   /* Display the name */
   useNextSeoProps() {
     return {
-      titleTemplate: 'XManage - %s'
+      titleTemplate: '%s - XManage'
     }
   },
 
@@ -30,7 +30,7 @@ const config: DocsThemeConfig = {
 
   /* Logo */
   logo: (
-    <> <img src="/assets/images/xmanage.png" alt="XManage" style={{ width: '50px', height: 'auto' }} /> </>
+    <> <img src="https://raw.githubusercontent.com/Tirito6626/xmanage-docs/main/assets/images/xmanage.png" alt="XManage" style={{ width: '50px', height: 'auto' }} /> </>
   ),
 
   /* GitHub button */
@@ -44,10 +44,18 @@ const config: DocsThemeConfig = {
   },
 
   /* GitHub stuff */
-  docsRepositoryBase: 'https://github.com/Tirito6626/xmanage-binaries',
+  docsRepositoryBase: 'https://github.com/Tirito6626/xmanage-docs',
   footer: {
-    text: 'Credits to: ItzGeoYT',
-  },
+    text: (
+      <span>
+        {new Date().getFullYear()} ©{' '}
+        <a href="https://github.com/Tirito6626/xmanage-binaries" target="_blank">
+          Made with 🧡 by Tirito
+        </a>
+        .
+      </span>
+      )
+    }
 }
-
+// by Tirito and Geo
 export default config

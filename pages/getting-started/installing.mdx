@@ -1,0 +1,67 @@
+import { Steps } from 'nextra/components'
+
+## Requirements
+- GNU/Linux
+- jq
+- awk
+- grep
+- tput
+- systemd 
+- coreutils
+- mkdir 
+- bash
+- nano
+- Basic linux understanding
+
+<Steps>
+
+## Installation
+
+### Step 1
+Installing required packages
+
+```bash
+apt -y install sudo jq gawk coreutils nano
+```
+### Step 2
+
+Download the latest release from the [XManage Binaries Repository](https://github.com/Tirito6626/xmanage-binaries/releases).
+
+```bash
+wget https://github.com/Tirito6626/xmanage-binaries/releases/latest/download/xmanage
+```
+
+### Step 3
+
+Make the downloaded binary executable
+
+```bash
+chmod +x ./xmanage
+```
+
+### Step 4
+
+Run the binary
+
+```bash
+./xmanage/xmanage
+```
+
+### Step 5
+
+Done! The command will return all available commands
+If you want to run xmanage with only one command, copy the binary into /usr/bin/ folder
+
+```bash
+cp ./xmanage /usr/bin/
+```
+
+### Step 6
+
+Check if it's working
+
+```bash
+xmanage
+```
+
+</Steps>

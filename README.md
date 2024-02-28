@@ -16,7 +16,7 @@ Multi-functional systemd wrapper written in pure bash.
 
 ## Installation
 
-Please visit https://xmanage.tirito.de
+Please visit https://xmanage.tirito.de for more information.
 
 ## Donations
 

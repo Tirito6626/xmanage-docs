@@ -1,0 +1,231 @@
+import { Callout } from 'nextra/components'
+
+# Available commands
+
+<Callout type="warning" emoji="⚠">
+  Not every command has example output present.
+</Callout>
+
+## help
+> Shows help message
+```ansi
+Usage: [38;5;38mxmanage[0m [COMMAND] [SUBCOMMAND] [ARG] [OPTION] [OPTION] ...
+...
+```
+
+
+## server
+> Category with all server-related subcommand
+>
+> Usage: server [subcommand]
+### create
+> Creates server on the current machine
+>
+> Arguments: none
+> Example usage:
+```ansi
+root@xmanage:~# xmanage server create
+```
+### delete
+> Deletes existing server(s) on the current machine 
+>
+> Arguments: [Server ID/name OR all] 
+>
+> Example usage:
+```ansi
+root@xmanage:~# xmanage server delete MyServer
+```
+### start
+> Starts server
+>
+> Arguments: [Server ID/name OR all] 
+>
+> Example usage:
+```ansi
+root@xmanage:~# xmanage server start MyServer
+[38;5;38m[Logs][0m Server is started succesfully
+```
+### restart
+> Restarts server
+>
+> Arguments: [Server ID/name OR all] 
+>
+> Example usage:
+```ansi
+root@xmanage:~# xmanage server restart MyServer
+[38;5;38m[Logs][0m Server is restarted succesfully
+```
+### stop
+> Stops server
+>
+> Arguments: [Server ID/name OR all] 
+>
+> Example usage:
+```ansi
+root@xmanage:~# xmanage server stop MyServer
+[38;5;38m[Logs][0m Server is stopped succesfully
+```
+### status 
+> Shows current server's status with the server's output
+>
+> Arguments: [Server ID/name]
+> 
+> Example usage:
+```ansi
+root@xmanage:~# xmanage server status MyServer
+    Showing status of [38;5;38mMyServer[0m
+    --------------------------
+[38;5;38mState[0m        [38;5;2mactive[0m
+[38;5;38mRAM[0m          [23M/128M]
+[38;5;38mCPU[0m          [0%/100%]
+[38;5;38mDisk[0m         [69M/115M]
+
+[38;5;38mDisk Usage[0m   [|                 [38;5;241m6%[0m]
+[38;5;38mCPU Usage[0m    [                  [38;5;241m0%[0m]
+[38;5;38mRAM Usage[0m    [|||              [38;5;241m18%[0m]
+...
+```
+### show
+> Shows current server's information. It doesn't show it's state and resources usage!
+>
+> Arguments: [Server ID/name]
+>
+> Example usage:
+```ansi
+root@xmanage:~# xmanage server status MyServer
+    Showing [38;5;38mMyServer[0m
+    ----------------
+[38;5;38mName[0m          MyServer
+[38;5;38mID[0m            2ccf94816b
+[38;5;38mCPU limit[0m     100%
+[38;5;38mRAM limit[0m     128M
+[38;5;38mSWAP limit[0m    0M
+[38;5;38mDisk limit[0m    128M
+[38;5;38mI/O weight[0m    500
+[38;5;38mAllowed ports[0m 3001
+[38;5;38mStartup[0m       bash index.sh
+[38;5;38mServer folder[0m /etc/xmanage/volumes/2ccf94816b
+[38;5;38mCreated at[0m    Wed Feb 21 15:24:17 2024
+```
+### logs
+> Shows ALL server's logs. Be careful with it!
+>
+> Arguments: [Server ID/name]
+>
+> Example usage: 
+```ansi
+root@xmanage:~# xmanage server logs MyServer
+```
+### list
+> Shows servers list with their current information
+>
+> Arguments: none
+>
+> Example usage:
+```ansi
+root@xmanage:~# xmanage server list
+Servers List
+------------
+[38;5;38mID          Name       State       CPU        RAM         Disk      Swap  IO   Ports[0m
+2ccf94816b  MyServer   [38;5;2mactive[0m    [0%/100%]  [23M/128M]  [69M/115M]  0M    500  3001
+```
+### edit
+> Edits server's resources limit and information
+> 
+> Arguments: [Server ID/name] [type]
+>
+> Types: name, cpulimit, ramlimit, swaplimit, disklimit, ioweight, ports, startup
+>
+> Example usage: 
+```ansi
+root@xmanage:~# xmanage server edit MyServer ramlimit
+```
+### edit-systemd
+> Opens server's configuration file and saves it
+> 
+> Arguments: [Server ID/name]
+>
+> Example usage: 
+```ansi
+root@xmanage:~# xmanage server edit-systemd MyServer
+<extiting nano>
+[38;5;38m[Logs][0m Server's config was succesfully updated
+```
+### monitor 
+> Shows real-time server status. Might be buggy!
+>
+> Arguments: [Server ID/name]
+> 
+> Example usage:
+```ansi
+root@xmanage:~# xmanage server monitor MyServer
+```
+### move-file
+> Moves file(s) to the server's directory. Directories are supported too
+>
+> Arguments: [Server ID/name] [file] [file] ...
+> 
+> Example usage:
+```ansi
+root@xmanage:~# xmanage server move-file MyServer file.txt my-directory file2.txt
+```
+### copy-file
+> Copies file(s) to the server's directory. Directories are supported too
+>
+> Arguments: [Server ID/name] [file] [file] ...
+> 
+> Example usage:
+```ansi
+root@xmanage:~# xmanage server copy-file MyServer file.txt my-directory file2.txt
+```
+### delete-file
+> Deletes file(s) from the server's directory. Directories are supported too
+>
+> Arguments: [Server ID/name] [file] [file] ...
+> 
+> Example usage:
+```ansi
+root@xmanage:~# xmanage server delete-file MyServer file.txt my-directory file2.txt
+```
+### files
+> Shows server's files
+>
+> Arguments: [Server ID/name]
+> 
+> Example usage:
+```ansi
+root@xmanage:~# xmanage server files MyServer
+file.txt my-directory file2.txt
+```
+### create-backup
+> Creates backup from the server's files
+>
+> Arguments: [Server ID/name]
+> 
+> Example usage:
+```ansi
+root@xmanage:~# xmanage server create-backup MyServer
+...
+[38;5;38m[Logs][0m Backup was created succesfully
+[38;5;38m[Logs][0m Backup saved in /etc/xmanage/backups/2ccf94816b
+```
+### delete-backup
+> Deletes existing backup
+>
+> Arguments: [Server ID/name] [backup_name]
+> 
+> Example usage:
+```ansi
+root@xmanage:~# xmanage server delete-backup MyServer 2024-02-21T12:53+01:00.tar.gz
+[38;5;38m[Logs][0m Backup was deleted succesfully
+```
+### backups
+> Shows server's backups
+>
+> Arguments: [Server ID/name]
+> 
+> Example usage:
+```ansi
+root@xmanage:~# xmanage server backups MyServer
+2024-02-21T12:53+01:00.tar.gz
+```

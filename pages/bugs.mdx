@@ -1,0 +1,8 @@
+## Known bugs
+
+```ansi
+root@xmanage:~# xmanage server edit MyServer disklimit
+...
+The filesystem is already 131072 (1k) blocks long.  Nothing to do!
+```
+That happens because of the loop devices, which are used for servers. Resizing a filesystem may cause server's files to break, so resize2fs doesn't allow shrinking loop devices. To avoid this, we recommend to reinstall server with the required disk space.

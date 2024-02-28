@@ -17,7 +17,7 @@ body{
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #f3bc7c;
+  background-color: #3081ce;
   border-radius: 6px;
 }
 
@@ -27,7 +27,7 @@ body{
 }
 
 .scrollbar-thumb {
-  background-color: #f3bc7c;
+  background-color: #3081ce;
   border-radius: 4px;
 }
 
