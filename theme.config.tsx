@@ -1,17 +1,7 @@
 import React from 'react'
 import { DocsThemeConfig } from 'nextra-theme-docs'
 
-const config: DocsThemeConfig = {
-
-  /* Announcement */
- /* banner: {
-    key: '1x.0',
-    text: (
-      <a href="#">
-         XManage v0.0.1 version.
-      </a>
-    )
-  }, */
+const config: DocsThemeConfig = 
 
   /* Display the name */
   useNextSeoProps() {

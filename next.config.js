@@ -5,4 +5,5 @@ const withNextra = require('nextra')({
   staticImage: true,
 })
 
+
 module.exports = withNextra()
