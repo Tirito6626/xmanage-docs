@@ -1,7 +1,6 @@
 import React from 'react'
 import { DocsThemeConfig } from 'nextra-theme-docs'
-
-const config: DocsThemeConfig = 
+export default {
 
 
   useNextSeoProps() {
@@ -47,5 +46,6 @@ const config: DocsThemeConfig =
       )
     }
 }
+
 // by Tirito and Geo
-export default config
+// export default
