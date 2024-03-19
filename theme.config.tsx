@@ -3,7 +3,7 @@ import { DocsThemeConfig } from 'nextra-theme-docs'
 
 const config: DocsThemeConfig = 
 
-  /* Display the name */
+
   useNextSeoProps() {
     return {
       titleTemplate: '%s - XManage'
