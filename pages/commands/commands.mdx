@@ -43,7 +43,7 @@ root@xmanage:~# xmanage server delete MyServer
 > Example usage:
 ```ansi
 root@xmanage:~# xmanage server start MyServer
-[38;5;38m[Logs][0m Server is started succesfully
+[38;5;38m[Info][0m Server is started succesfully
 ```
 ### restart
 > Restarts server
@@ -53,7 +53,7 @@ root@xmanage:~# xmanage server start MyServer
 > Example usage:
 ```ansi
 root@xmanage:~# xmanage server restart MyServer
-[38;5;38m[Logs][0m Server is restarted succesfully
+[38;5;38m[Info][0m Server is restarted succesfully
 ```
 ### stop
 > Stops server
@@ -63,7 +63,7 @@ root@xmanage:~# xmanage server restart MyServer
 > Example usage:
 ```ansi
 root@xmanage:~# xmanage server stop MyServer
-[38;5;38m[Logs][0m Server is stopped succesfully
+[38;5;38m[Info][0m Server is stopped succesfully
 ```
 ### status 
 > Shows current server's status with the server's output
@@ -149,7 +149,7 @@ root@xmanage:~# xmanage server edit MyServer ramlimit
 ```ansi
 root@xmanage:~# xmanage server edit-systemd MyServer
 <extiting nano>
-[38;5;38m[Logs][0m Server's config was succesfully updated
+[38;5;38m[Info][0m Server's config was succesfully updated
 ```
 ### monitor 
 > Shows real-time server status. Might be buggy!
@@ -206,8 +206,8 @@ file.txt my-directory file2.txt
 ```ansi
 root@xmanage:~# xmanage server create-backup MyServer
 ...
-[38;5;38m[Logs][0m Backup was created succesfully
-[38;5;38m[Logs][0m Backup saved in /etc/xmanage/backups/2ccf94816b
+[38;5;38m[Info][0m Backup was created succesfully
+[38;5;38m[Info][0m Backup saved in /etc/xmanage/backups/2ccf94816b
 ```
 ### delete-backup
 > Deletes existing backup
@@ -217,7 +217,7 @@ root@xmanage:~# xmanage server create-backup MyServer
 > Example usage:
 ```ansi
 root@xmanage:~# xmanage server delete-backup MyServer 2024-02-21T12:53+01:00.tar.gz
-[38;5;38m[Logs][0m Backup was deleted succesfully
+[38;5;38m[Info][0m Backup was deleted succesfully
 ```
 ### backups
 > Shows server's backups
@@ -228,4 +228,82 @@ root@xmanage:~# xmanage server delete-backup MyServer 2024-02-21T12:53+01:00.tar
 ```ansi
 root@xmanage:~# xmanage server backups MyServer
 2024-02-21T12:53+01:00.tar.gz
+```
+## api
+
+### start
+> Starts API
+>
+> Arguments: None
+>
+> Example usage:
+```ansi
+root@xmanage:~# xmanage api start 
+[38;5;38m[Info][0m Started API succesfully
+```
+### stop
+> Stops API
+>
+> Arguments: None
+>
+> Example usage:
+```ansi
+root@xmanage:~# xmanage api stop
+[38;5;38m[Info][0m Stopped API succesfully
+```
+### restart
+> Restarts API
+>
+> Arguments: None
+>
+> Example usage:
+```ansi
+root@xmanage:~# xmanage api restart 
+[38;5;38m[Info][0m Restarted API succesfully
+```
+### status
+> Shows status of API
+>
+> Arguments: None
+>
+> Example usage:
+```ansi
+root@xmanage:~# xmanage api status
+    Showing status of [38;5;38mMyServer[0m
+    --------------------------
+[38;5;38mState[0m        [38;5;2mactive[0m
+[38;5;38mRAM[0m          [3M/128M]
+[38;5;38mCPU[0m          [0%/100%]
+
+[38;5;38mCPU Usage[0m    [                  [38;5;241m0%[0m]
+[38;5;38mRAM Usage[0m    [|||               [38;5;241m2%[0m]
+...
+```
+### run
+> Starts API process directly
+>
+> Arguments: None
+>
+> Example usage:
+```ansi
+root@xmanage:~# xmanage api run
+[38;5;38m[Info][0m Starting API on port 8041
+```
+### key generate
+> Generates API key
+>
+> Arguments: None
+>
+> Example usage:
+```ansi
+root@xmanage:~# xmanage api key generate
+```
+### key delete
+> Deletes API key
+>
+> Arguments: [API key]
+>
+> Example usage:
+```ansi
+root@xmanage:~# xmanage api key delete PKG7bLaoMVV-PE34N5SWO7KrTF0-WwsWXKWcfqH6wMbDftd8kE
 ```

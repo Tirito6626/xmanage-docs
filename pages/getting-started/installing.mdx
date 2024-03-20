@@ -15,56 +15,54 @@ import { Steps } from 'nextra/components'
 
 <Steps>
 
-## Installation
-
+## Installation on Debian-based distributions
 ### Step 1
-Installing required packages
-
+Add Xmanage Repository list 
 ```bash
-apt -y install sudo jq gawk coreutils nano
+curl https://xmanage.ftp.sh/apt-repo/xmanage.list -o /etc/apt/sources.list.d/xmanage.list
 ```
 ### Step 2
-
-Download the latest release from the XManage Binaries Repository (https://github.com/Tirito6626/xmanage-binaries/releases or https://xmanage-docs.tirito.de/binaries/latest/).
-
+Import keyrings using `apt-key`
 ```bash
-wget https://github.com/Tirito6626/xmanage-binaries/releases/latest/download/xmanage
-```
-or
-```bash
-wget https://xmanage-docs.tirito.de/binaries/latest/xmanage
+wget -qO - https://xmanage.ftp.sh/apt-repo/xmanage.key | sudo apt-key add -
 ```
 ### Step 3
-
-Make the downloaded binary executable
-
+Update packages list
 ```bash
-chmod +x ./xmanage
+sudo apt-get update
 ```
-
 ### Step 4
-
-Run the binary
-
+Install the package
 ```bash
-./xmanage
+sudo apt-get install xmanage
 ```
-
 ### Step 5
-
-Done! The command will return all available commands
-If you want to run xmanage with only one command, copy the binary into /usr/bin/ directory
-
-```bash
-cp ./xmanage /usr/bin/
-```
-
-### Step 6
-
 Check if it's working
-
 ```bash
-xmanage
+xmanage --version # or /usr/bin/xmanage --version
+```
+</Steps>
+<Steps>
+## Installation on other distributions
+### Step 1
+Install required packages
+```bash
+sudo apt -y install sudo jq gawk coreutils nano
+```
+### Step 2
+Download the latest release from the XManage Repository
+```bash
+wget https://xmanage.ftp.sh/binaries/xmanage-{LATEST_VERSION} -O /usr/bin/xmanage
+```
+### Step 3
+Make the downloaded binary executable
+```bash
+chmod +x /usr/bin/xmanage
+```
+### Step 4
+Run the binary
+```bash
+xmanage --version # or /usr/bin/xmanage --version
 ```
 
 </Steps>

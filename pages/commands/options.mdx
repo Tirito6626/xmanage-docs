@@ -8,8 +8,32 @@
 <p>1-255 ANSI color number</p>
  
 ![colors](https://i.stack.imgur.com/a2S4s.png)
-
+<p>Example usage:</p>
+```ansi
+root@xmanage:~# xmanage help --color=red
+```
 ---
 
 ### --no-color
 Disables every color from the commands
+<p>Example usage:</p>
+```ansi
+root@xmanage:~# xmanage help --no-color
+```
+
+---
+### --port=[port]
+Makes API use custom port, instead of 8041
+<p>Example usage:</p>
+```ansi
+root@xmanage:~# xmanage api run --port=3050
+[38;5;38m[Info][0m Starting API on port 3050
+```
+
+---
+### --version
+Show current version and license
+<p>Example usage:</p>
+```ansi
+root@xmanage:~# xmanage --version
+```
