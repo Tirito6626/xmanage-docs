@@ -1,5 +1,5 @@
 import { Steps } from 'nextra/components'
-
+import { Tabs } from 'nextra/components'
 ## Requirements
 - GNU/Linux
 - jq
@@ -11,10 +11,12 @@ import { Steps } from 'nextra/components'
 - mkdir 
 - bash
 - nano
+- ncat 
 - Basic linux understanding
 
+<Tabs items={['Debian-based Distros', 'Other Distros']}>
+<Tabs.Tab>
 <Steps>
-
 ## Installation on Debian-based distributions
 ### Step 1
 Add Xmanage Repository list 
@@ -42,12 +44,14 @@ Check if it's working
 xmanage --version # or /usr/bin/xmanage --version
 ```
 </Steps>
+</Tabs.Tab>
+<Tabs.Tab>
 <Steps>
 ## Installation on other distributions
 ### Step 1
 Install required packages
 ```bash
-sudo apt -y install sudo jq gawk coreutils nano
+sudo apt -y install sudo jq gawk coreutils nano ncat
 ```
 ### Step 2
 Download the latest release from the XManage Repository
@@ -66,3 +70,4 @@ xmanage --version # or /usr/bin/xmanage --version
 ```
 
 </Steps>
+</Tabs.Tab>
