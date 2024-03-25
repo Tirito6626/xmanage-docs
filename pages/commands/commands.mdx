@@ -219,6 +219,16 @@ root@xmanage:~# xmanage server create-backup MyServer
 root@xmanage:~# xmanage server delete-backup MyServer 2024-02-21T12:53+01:00.tar.gz
 [38;5;38m[Info][0m Backup was deleted succesfully
 ```
+### restore-backup
+> Restores server from the backup
+>
+> Arguments: [Server ID/name] [backup_name]
+> 
+> Example usage:
+```ansi
+root@xmanage:~# xmanage server restore-backup MyServer 2024-02-21T12:53+01:00.tar.gz
+```
+
 ### backups
 > Shows server's backups
 >
