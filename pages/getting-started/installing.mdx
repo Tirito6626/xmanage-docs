@@ -1,5 +1,3 @@
-import { Steps, Tabs } from 'nextra/components'
-
 ## Requirements
 - GNU/Linux
 - jq
@@ -44,16 +42,31 @@ Check if it's working
 xmanage --version # or /usr/bin/xmanage --version
 ```
 </Steps>
-</Tabs.Tab>
-
-<Tabs.Tab>
 <Steps>
 
 ## Installation on other distributions
 ### Step 1
 Install required packages
+#### RedHat-based distributions:
 ```bash
-sudo apt -y install sudo jq gawk coreutils nano ncat
+# RPM
+rpm -i sudo jq gawk coreutils nano ncat
+# DNF
+dnf install sudo jq gawk coreutils nano ncat
+# YUM
+yum install sudo jq gawk coreutils nano ncat
+```
+##### Arch-based distributions:
+```bash
+pacman -S sudo jq gawk coreutils nano ncat
+```
+##### Alpine:
+```bash
+apk add sudo jq gawk coreutils nano ncat
+```
+##### Gentoo:
+```bash
+emerge sudo jq gawk coreutils nano ncat
 ```
 ### Step 2
 Download the latest release from the XManage Repository
